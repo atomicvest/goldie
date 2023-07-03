@@ -1,4 +1,4 @@
-module github.com/sebdah/goldie/v2
+module github.com/atomicvest/goldie/v2
 
 go 1.12
 
