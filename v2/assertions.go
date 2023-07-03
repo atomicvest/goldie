@@ -157,7 +157,7 @@ func (g *Goldie) compare(t *testing.T, name string, actualData []byte) error {
 	}
 
 	if !bytes.Equal(actualData, expectedData) {
-		msg := "Result did not match the golden fixture. Diff is below:\n\n"
+		msg := "Did not match the golden [" + g.GoldenFileName(t, name) + "]. Diff is below:\n\n"
 		actual := string(actualData)
 		expected := string(expectedData)
 
