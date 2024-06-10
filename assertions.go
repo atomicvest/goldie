@@ -150,7 +150,7 @@ func (g *Goldie) compare(t *testing.T, name string, actualData []byte) error {
 
 	if err != nil {
 		if os.IsNotExist(err) {
-			return newErrFixtureNotFound()
+			return newErrFixtureNotFound(name)
 		}
 
 		return fmt.Errorf("expected %s to be nil", err.Error())
@@ -180,7 +180,7 @@ func (g *Goldie) compareTemplate(t *testing.T, name string, data interface{}, ac
 
 	if err != nil {
 		if os.IsNotExist(err) {
-			return newErrFixtureNotFound()
+			return newErrFixtureNotFound(name)
 		}
 
 		return fmt.Errorf("expected %s to be nil", err.Error())

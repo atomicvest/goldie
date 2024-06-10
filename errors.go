@@ -8,10 +8,9 @@ type errFixtureNotFound struct {
 }
 
 // newErrFixtureNotFound returns a new instance of the error.
-func newErrFixtureNotFound() *errFixtureNotFound {
+func newErrFixtureNotFound(name string) *errFixtureNotFound {
 	return &errFixtureNotFound{
-		// TODO: flag name should be based on the variable value
-		message: "Golden fixture not found. Try running with -update flag.",
+		message: fmt.Sprintf("Golden fixture %q not found. Try running with -update flag.", name),
 	}
 }
 
